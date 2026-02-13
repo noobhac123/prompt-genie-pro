@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter } from "next/font/google"; // Plus Jakarta Sans bhi use kar sakte ho for more tech feel
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "Best Free AI Prompts & Tools | USA Tech Guide",
-  description: "Download free ChatGPT prompts and find the best AI tools for business, legal, and art.",
+  title: "AI MasterHub | Premium Prompts & Tools",
+  description: "Curated collection of the best AI tools and prompts.",
 };
 
 export default function RootLayout({
@@ -15,8 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} font-sans antialiased bg-[#F3F4F6]`}>
+        {children}
+      </body>
     </html>
   );
 }
