@@ -1,6 +1,5 @@
---- START OF FILE prompt-genie-pro-main/components/Navbar.tsx ---
 import Link from "next/link";
-import { Bot, Sparkles, PlusCircle } from "lucide-react";
+import { Bot, PlusCircle } from "lucide-react";
 
 export default function Navbar() {
   return (
