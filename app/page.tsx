@@ -4,7 +4,8 @@ import { useState } from "react";
 import { prompts, tools } from "@/lib/data";
 import { useMonetag } from "@/hooks/useMonetag";
 import Navbar from "@/components/Navbar";
-import { Copy, Check, ExternalLink, Zap } from "lucide-react";
+// FIX: Added 'Bot' to the imports below
+import { Copy, Check, ExternalLink, Zap, Bot } from "lucide-react";
 
 export default function Home() {
   const [filter, setFilter] = useState("All");
