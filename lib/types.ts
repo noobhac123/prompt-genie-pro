@@ -1,10 +1,9 @@
---- START OF FILE prompt-genie-pro-main/lib/types.ts ---
 export interface Prompt {
   id: number;
   title: string;
   category: string;
   content: string;
-  is_trending?: boolean; // Database me ye column add kar sakte ho future me
+  is_trending?: boolean;
 }
 
 export interface Tool {
@@ -14,5 +13,5 @@ export interface Tool {
   category: string;
   url: string;
   isFree: boolean;
-  image_url?: string; // Future proofing for logos
+  image_url?: string;
 }
