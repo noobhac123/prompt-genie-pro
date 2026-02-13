@@ -2,6 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 210 40% 98%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --border: 214 32% 91%;
+}
+
 body {
-  background: #f8fafc;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Premium Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Dot Pattern Background */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+}
+
+/* Text Gradient */
+.text-gradient {
+  background: linear-gradient(to right, #2563eb, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card Hover Glow */
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border-color: #3b82f6;
 }
