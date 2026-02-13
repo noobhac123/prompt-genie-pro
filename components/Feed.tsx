@@ -18,7 +18,6 @@ export default function Feed({ initialPrompts, initialTools }: FeedProps) {
 
   const categories = ["All", "Business", "Writing", "Art", "Coding", "Legal"];
 
-  // Advanced Filtering Logic
   const filteredPrompts = initialPrompts.filter(p => {
     const matchesCategory = filter === "All" || p.category === filter;
     const matchesSearch = p.title.toLowerCase().includes(search.toLowerCase()) || 
