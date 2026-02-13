@@ -4,12 +4,9 @@ import Hero from "@/components/Hero";
 import Feed from "@/components/Feed";
 import { Prompt, Tool } from "@/lib/types";
 
-// Page ko har 60 seconds me regenerate karein (ISR)
-// Isse agar database me kuch add hoga toh site apne aap update ho jayegi
 export const revalidate = 60;
 
 export default async function Home() {
-  // Server Side Fetching (Parallel Requests for speed)
   const promptsPromise = supabase.from('prompts').select('*');
   const toolsPromise = supabase.from('tools').select('*');
 
@@ -24,7 +21,6 @@ export default async function Home() {
       <Hero />
       <Feed initialPrompts={prompts} initialTools={tools} />
       
-      {/* Professional Footer */}
       <footer className="bg-white border-t border-gray-200 py-12 mt-20">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
